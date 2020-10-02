@@ -38,7 +38,7 @@ export class ImageFilter extends Filter implements IImageFilter {
     this.requestToAnalyzeImage(request)
       .then(({ result, url }) => {
         if (result) {
-          this.blockedItems++
+          window.blockedItems++
         } else {
           this.showImage(image, url)
         }
