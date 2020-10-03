@@ -12,6 +12,8 @@ export class Filter implements IFilter {
   constructor (_logger: ILogger) {
     this.logger = _logger
     this.blockedItems = 0
+		// @ts-expect-error
+    window.blockedAmount = 0
   }
 
   public getBlockAmount (): number {

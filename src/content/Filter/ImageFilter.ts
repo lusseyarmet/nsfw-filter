@@ -38,6 +38,7 @@ export class ImageFilter extends Filter implements IImageFilter {
     this.requestToAnalyzeImage(request)
       .then(({ result, url }) => {
         if (result) {
+          // @ts-expect-error
           window.blockedItems++
         } else {
           this.showImage(image, url)
